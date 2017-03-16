@@ -1,0 +1,28 @@
+{
+  "name": "tjameson",
+  "version": "1.0.0",
+  "description": "bandwagon",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "knex": "^0.12.7",
+    "pg": "^6.1.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-materialize": "^0.18.1"
+  },
+  "devDependencies": {
+    "react-materialize": "^0.18.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": "Your Name <thomas.gregory.jameson@gmail.com>",
+  "license": "ISC"
+}

@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-style: oblique;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+body, html {
+  background-color: #031927;
+  width: 100%;
+  margin: 0;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card {
+  background-color: transparent;
+  position: relative;
+  margin: .5rem 0 1rem 0;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  float: left;
+  width: 50%;
+  height: 50%;
+}
+
+.card:nth-child(1+4n)::before {
+  content: '';
+  clear: left;
+}
+
+.search-bar {
+  margin: 20px;
+  text-align: center;
+}
+
+.form-inline {
+  /*margin-top: 100px;*/
+  width: 40%;
+  margin: 10% auto;
+}
+
+.card-container {
+  margin-top: 20%;
+}
+
+#Image {
+  width: 120px !important;
+  height: 120px !important;
+}
+
+card .card-content {
+  border-radius: 0 0 2px 2px;
+  height: 100px;
+  padding-top: 20px;
+}
+
+#artistCardTrackName {
+  font-size: small;
+}
+
+.card-inner {
+  margin-right: 5px;
+  background-color: #070707;
+}
+
+#floatRight {
+  float: right;
+}
+
+.z-depth-1 {
+  display: inline-block;
+  padding: 32px 48px 0px 48px;
+  border: 1px solid #EEE
+}
