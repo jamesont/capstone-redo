@@ -12,13 +12,15 @@ class LoginForm extends Component {
 
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      login: true
     }
+    this.showSignUp = this.showSignUp.bind(this)
   }
 
   onSubmit(e){
     e.preventDefault()
-    this.props.loginTrue()
+    // this.props.loginTrue()
     console.log(this.state)
     axios.post('/LoginForm', {
       email: this.state.email,
@@ -28,6 +30,13 @@ class LoginForm extends Component {
     }).catch(function (err) {
       console.log(err)
     })
+  }
+
+  showSignUp(e){
+    e.preventDefault()
+    console.log('hit');
+    console.log(this.state);
+    this.setState({ login: false })
   }
 
   render(){
@@ -58,6 +67,11 @@ class LoginForm extends Component {
               waves='light'>
               Log In
             </Button>
+            <a
+              className="btn-flat form-control"
+              onClick={this.showSignUp.bind(this)}>
+              Sign Up
+            </a>
           </Row>
         </form>
       </div>

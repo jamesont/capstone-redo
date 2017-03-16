@@ -25,7 +25,6 @@ class App extends Component {
     }
 
     this.getArtistInformation = this.getArtistInformation.bind(this)
-    this.passSearchInput = this.passSearchInput.bind(this)
   }
 
   getArtistInformation(spotifyIdUrl) {
@@ -54,75 +53,15 @@ class App extends Component {
     })
   }//end getArtistInfo
 
-
-  hasAccount() {
-    this.setState({
-      loggedIn: true,
-      hasAccount: true,
-      showArtistTable: this.state.showArtistTable
-    })
-  }
-
-  loginTrue() {
-    this.setState({
-      loggedIn: true,
-      hasAccount: true,
-      showArtistTable: this.state.showArtistTable
-    })
-  }
-
-  passSearchInput(e) {
-    let formInput = e.target.value
-    this.setState({setArtist: formInput})
-  }
-
-  renderLoginForm(e){
-    e.preventDefault()
-    return (
-        <div>
-          <LoginForm/>
-        </div>
-      )
-  }
-
-  renderSignUpForm(e){
-    e.preventDefault()
-    return (
+  render(){
+    return(
       <div>
         <SignUpForm/>
+        <LoginForm/>
       </div>
     )
   }
 
-  render(){
-    return (
-      <div className="container">
-        <form action="">
-
-          <Row>
-            <Col s={2}>
-              <Button
-                id="loginButton"
-                className="btn btn-default"
-                onSubmit={this.renderLoginForm.bind(this)}
-                >Log In
-              </Button>
-            </Col>
-            <Col s={2}>
-              <Button
-                id="signUpButton"
-                className="btn btn-default"
-                onSubmit={this.renderSignUpForm.bind(this)}
-                >Sign Up
-              </Button>
-            </Col>
-          </Row>
-
-        </form>
-      </div>
-    )
-  }
-
-}//end class
+}
 
 export default App
